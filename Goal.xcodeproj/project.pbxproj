@@ -38,6 +38,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF2877682A7F0495009B6435 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFE8F7982A7EF32300F4B37E /* MainMenu.swift */,
+				AFE8F79C2A7EF41E00F4B37E /* GraveView.swift */,
+				AFE8F79A2A7EF40E00F4B37E /* GameView.swift */,
+				AF3ED2A32A7B8F590069F889 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AF3ED2952A7B8F590069F889 = {
 			isa = PBXGroup;
 			children = (
@@ -57,13 +68,10 @@
 		AF3ED2A02A7B8F590069F889 /* Goal */ = {
 			isa = PBXGroup;
 			children = (
+				AF2877682A7F0495009B6435 /* Views */,
 				AF3ED2A12A7B8F590069F889 /* GoalApp.swift */,
-				AF3ED2A32A7B8F590069F889 /* ContentView.swift */,
-				AFE8F79A2A7EF40E00F4B37E /* GameView.swift */,
-				AFE8F79C2A7EF41E00F4B37E /* GraveView.swift */,
 				AF3ED2A52A7B8F5A0069F889 /* Assets.xcassets */,
 				AF3ED2A72A7B8F5A0069F889 /* Preview Content */,
-				AFE8F7982A7EF32300F4B37E /* MainMenu.swift */,
 			);
 			path = Goal;
 			sourceTree = "<group>";
@@ -285,8 +293,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +303,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,8 +321,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,7 +331,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

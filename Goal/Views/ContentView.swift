@@ -14,7 +14,7 @@ struct ContentView: View {
         if gameData.isGame {
             GameView()
         } else if gameData.isGrave {
-            GraveView()
+            GraveView(gameData: gameData)
         } else {
             MainMenu(gameData: gameData)
         }
