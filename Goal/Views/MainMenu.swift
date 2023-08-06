@@ -37,7 +37,6 @@ struct MainMenu: View {
                 }
                 Spacer()
                 Button {
-                    print("do it")
                     gameData.isGame = true
                 } label: {
                     HStack {
