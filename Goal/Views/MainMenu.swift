@@ -8,7 +8,6 @@
 import SwiftUI
 
 class GameData: ObservableObject {
-    @Published var name = "Some Name"
     @Published var isGame = false
     @Published var isGrave = false
 }
@@ -23,13 +22,18 @@ struct MainMenu: View {
             VStack {
                 Spacer()
                 VStack {
-                    Text("Game of a life")
-                        .font(.system(size:48, weight: .semibold))
+                    Text("Game Of A Life")
+                        .font(.system(size:40, weight: .semibold))
                         .foregroundColor(.white)
                         
                     Text("by Brett Moxey")
                         .font(.system(size:24))
                         .foregroundColor(.white)
+                        .padding(.bottom, -24)
+                    Image("Brett-Computer")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 80)
                 }
                 Spacer()
                 Button {
@@ -37,8 +41,7 @@ struct MainMenu: View {
                     gameData.isGame = true
                 } label: {
                     HStack {
-                        Text("🤰")
-                            .font(.system(size:72))
+                        Image(uiImage: "🤰".textToImage(size: 80)!)
                         Text("Create a new life")
                             .font(.system(size:32))
                             .foregroundColor(.black)
@@ -52,18 +55,16 @@ struct MainMenu: View {
                 Spacer()
                 Button {
                     gameData.isGrave = true
-                    print("Go to graves")
                 } label: {
                     HStack {
-                        Text("🪦")
-                            .font(.system(size:72))
-                        Text("Visit grave stones")
+                        Image(uiImage: "🪦".textToImage(size: 80)!)
+                        Text("Visit grave yard")
                             .font(.system(size:32))
                             .foregroundColor(.black)
                             .frame(width:160)
                     }
                     .frame(width: 280, height:120)
-                    .background(Color.gray.gradient)
+                    .background(Color(hue: 0, saturation: 0, brightness: 0.75).gradient)
                     .cornerRadius(10.0)
                 }
                 Spacer()
@@ -71,7 +72,7 @@ struct MainMenu: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width:UIScreen.main.bounds.width, height: 150)
-                Spacer()
+
             }
         }
     }
