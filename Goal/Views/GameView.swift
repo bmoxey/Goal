@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct GameView: View {
-    var age = 0
+    @State var age = 0
     var name = getName()
+    @State var face = ["👶🏻","👶🏼","👶🏽","👶🏾","👶🏿"]
     var body: some View {
         ZStack {
             NavigationView {
                 Form {
                     Group {
-                        
                         HStack {
-                            Image(uiImage: ["👶🏻","👶🏼","👶🏽","👶🏾","👶🏿"][name.color].textToImage(size: 60)!)
+                            Image(uiImage: face[name.color].textToImage(size: 60)!)
                                 .padding(.trailing)
                             VStack(alignment: .leading) {
                                 Text("\(name.firstName) \(name.surName)")
@@ -29,7 +29,6 @@ struct GameView: View {
                             }
                         }
                     }
-                    .listRowInsets(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
 
                     Section(header: Text("Wellness"), content: {
                         HStack {
@@ -51,7 +50,7 @@ struct GameView: View {
                             Text("Happiness")
                         }
                     })
-                    .listRowInsets(EdgeInsets(top: 5, leading: 5, bottom: -20, trailing: 5))
+
                     Section(header: Text("Work"), content:{
                         HStack {
                             Image(systemName: "person.crop.square.filled.and.at.rectangle.fill")
@@ -60,7 +59,7 @@ struct GameView: View {
                             Text("Occupation")
                         }
                     })
-                    .listRowInsets(EdgeInsets(top: 5, leading: 5, bottom: -20, trailing: 5))
+
                     Section(header: Text("Resources"), content: {
                         HStack {
                             Image(systemName: "car.fill")
@@ -81,10 +80,42 @@ struct GameView: View {
                             Text("Family and friends")
                         }
                     })
-                    .listRowInsets(EdgeInsets(top: 5, leading: 5, bottom: -20, trailing: 5))
+
                     Section {
                         Button {
-                            print("aa")
+                            age += 1
+                            if age > 5 {
+                                if name.isMale {
+                                    face = ["👦🏻","👦🏼","👦🏽","👦🏾","👦🏿"]
+                                } else {
+                                    face = ["👧🏻","👧🏼","👧🏽","👧🏾","👧🏿"]
+                                }
+                            }
+                            if age > 11 {
+                                face = ["🧑🏻","🧑🏼","🧑🏽","🧑🏾","🧑🏿"]
+                            }
+                            if age > 17 {
+                                if name.isMale {
+                                    face = ["👨🏻","👨🏼","👨🏽","👨🏾","👨🏿"]
+                                } else {
+                                    face = ["👩🏻","👩🏼","👩🏽","👩🏾","👩🏿"]
+                                }
+                            }
+                            if age > 39 {
+                                if name.isMale {
+                                    face = ["🧔🏻‍♂️","🧔🏼‍♂️","🧔🏽‍♂️","🧔🏾‍♂️","🧔🏿‍♂️"]
+                                } else {
+                                    face = ["👩🏻‍🦱","👩🏼‍🦱","👩🏽‍🦱","👩🏾‍🦱","👩🏿‍🦱"]
+                                }
+                            }
+                            if age > 64 {
+                                if name.isMale {
+                                    face = ["👴🏻","👴🏼","👴🏽","👴🏾","👴🏿"]
+                                } else {
+                                    face = ["👵🏻","👵🏼","👵🏽","👵🏾","👵🏿"]
+                                }
+                            }
+
                         } label: {
                             HStack {
                                 Text("Next Year ")

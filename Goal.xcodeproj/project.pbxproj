@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2AD0652A82448900D5644A /* NextYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2AD0642A82448900D5644A /* NextYear.swift */; };
 		AF3ED2A22A7B8F590069F889 /* GoalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3ED2A12A7B8F590069F889 /* GoalApp.swift */; };
 		AF3ED2A42A7B8F590069F889 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3ED2A32A7B8F590069F889 /* ContentView.swift */; };
 		AF3ED2A62A7B8F5A0069F889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF3ED2A52A7B8F5A0069F889 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF2AD0642A82448900D5644A /* NextYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextYear.swift; sourceTree = "<group>"; };
 		AF37FAD52A81616900FF4C9F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AF3ED29E2A7B8F590069F889 /* Goal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3ED2A12A7B8F590069F889 /* GoalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalApp.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				AF413B242A804276001D0DB0 /* NewGame.swift */,
+				AF2AD0642A82448900D5644A /* NextYear.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3ED2A42A7B8F590069F889 /* ContentView.swift in Sources */,
+				AF2AD0652A82448900D5644A /* NextYear.swift in Sources */,
 				AF413B252A804276001D0DB0 /* NewGame.swift in Sources */,
 				AFED268C2A801AF7003BA9BB /* UIKitCode.swift in Sources */,
 				AFE8F7992A7EF32300F4B37E /* MainMenu.swift in Sources */,
