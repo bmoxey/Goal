@@ -13,7 +13,7 @@ struct GameView: View {
     @State var face = ["👶🏻","👶🏼","👶🏽","👶🏾","👶🏿"]
     var body: some View {
         ZStack {
-            NavigationView {
+            NavigationStack {
                 Form {
                     Group {
                         HStack {
@@ -29,7 +29,7 @@ struct GameView: View {
                             }
                         }
                     }
-
+                    
                     Section(header: Text("Wellness"), content: {
                         HStack {
                             Image(systemName: "heart.fill")
@@ -50,28 +50,56 @@ struct GameView: View {
                             Text("Happiness")
                         }
                     })
-
-                    Section(header: Text("Work"), content:{
-                        HStack {
-                            Image(systemName: "person.crop.square.filled.and.at.rectangle.fill")
-                                .foregroundColor(.cyan)
-                                .frame(width: 24)
-                            Text("Occupation")
-                        }
-                    })
-
+                    if age > 6 {
+                        
+                        Section(header: Text("School/Work"), content:{
+                            if age > 6 && age < 13 {
+                                HStack {
+                                    Image(systemName: "character.book.closed.fill")
+                                        .foregroundColor(.gray)
+                                        .frame(width: 24)
+                                    Text("Primary School")
+                                    
+                                }
+                            }
+                            if age > 12 && age < 19 {
+                                HStack {
+                                    Image(systemName: "text.book.closed.fill")
+                                        .foregroundColor(.gray)
+                                        .frame(width: 24)
+                                    Text("Secondary School")
+                                    
+                                }
+                            }
+                            if age > 15 {
+                                HStack {
+                                    Image(systemName: "person.crop.square.filled.and.at.rectangle.fill")
+                                        .foregroundColor(.cyan)
+                                        .frame(width: 24)
+                                    Text("Occupation")
+                                }
+                            }
+                            
+                        })
+                    }
+                    
                     Section(header: Text("Resources"), content: {
-                        HStack {
-                            Image(systemName: "car.fill")
-                                .foregroundColor(.purple)
-                                .frame(width: 24)
-                            Text("Assets")
+                        
+                        if age > 18 {
+                            HStack {
+                                Image(systemName: "car.fill")
+                                    .foregroundColor(.purple)
+                                    .frame(width: 24)
+                                Text("Assets")
+                            }
                         }
-                        HStack {
-                            Image(systemName: "basketball.fill")
-                                .foregroundColor(.orange)
-                                .frame(width: 24)
-                            Text("Activities")
+                        if age > 12 {
+                            HStack {
+                                Image(systemName: "basketball.fill")
+                                    .foregroundColor(.orange)
+                                    .frame(width: 24)
+                                Text("Activities")
+                            }
                         }
                         HStack {
                             Image(systemName: "figure.2.arms.open")
@@ -80,58 +108,69 @@ struct GameView: View {
                             Text("Family and friends")
                         }
                     })
-
-                    Section {
-                        Button {
-                            age += 1
-                            if age > 5 {
-                                if name.isMale {
-                                    face = ["👦🏻","👦🏼","👦🏽","👦🏾","👦🏿"]
-                                } else {
-                                    face = ["👧🏻","👧🏼","👧🏽","👧🏾","👧🏿"]
+                    if age < 12 {
+                        Section {
+                            Button {
+                                age += 6
+                                face = GetFace(age: age, isMale: name.isMale)
+                            } label: {
+                                HStack {
+                                    Text("Jump 6 Years ")
+                                    Image(systemName: "forward.end.alt")
                                 }
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .frame(height: 50)
+                                .background(Color.blue.gradient)
+                                .foregroundColor(.white)
+                                .font(.system(size:20, weight: .bold))
+                                .cornerRadius(25.0)
                             }
-                            if age > 11 {
-                                face = ["🧑🏻","🧑🏼","🧑🏽","🧑🏾","🧑🏿"]
-                            }
-                            if age > 17 {
-                                if name.isMale {
-                                    face = ["👨🏻","👨🏼","👨🏽","👨🏾","👨🏿"]
-                                } else {
-                                    face = ["👩🏻","👩🏼","👩🏽","👩🏾","👩🏿"]
-                                }
-                            }
-                            if age > 39 {
-                                if name.isMale {
-                                    face = ["🧔🏻‍♂️","🧔🏼‍♂️","🧔🏽‍♂️","🧔🏾‍♂️","🧔🏿‍♂️"]
-                                } else {
-                                    face = ["👩🏻‍🦱","👩🏼‍🦱","👩🏽‍🦱","👩🏾‍🦱","👩🏿‍🦱"]
-                                }
-                            }
-                            if age > 64 {
-                                if name.isMale {
-                                    face = ["👴🏻","👴🏼","👴🏽","👴🏾","👴🏿"]
-                                } else {
-                                    face = ["👵🏻","👵🏼","👵🏽","👵🏾","👵🏿"]
-                                }
-                            }
-
-                        } label: {
-                            HStack {
-                                Text("Next Year ")
-                                Image(systemName: "forward.end")
-                            }
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .frame(height: 50)
-                            .background(Color.blue.gradient)
-                            .foregroundColor(.white)
-                            .font(.system(size:20, weight: .bold))
-                            .cornerRadius(25.0)
+                            
                         }
-
+                        .listRowBackground(Color.clear)
                     }
-                    .listRowBackground(Color.clear)
-                    
+                    if age == 12 {
+                        Section {
+                            Button {
+                                age += 3
+                                face = GetFace(age: age, isMale: name.isMale)
+                            } label: {
+                                HStack {
+                                    Text("Jump 3 Years ")
+                                    Image(systemName: "forward.end.alt")
+                                }
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .frame(height: 50)
+                                .background(Color.blue.gradient)
+                                .foregroundColor(.white)
+                                .font(.system(size:20, weight: .bold))
+                                .cornerRadius(25.0)
+                            }
+                            
+                        }
+                        .listRowBackground(Color.clear)
+                    }
+                    if age > 12 {
+                        Section {
+                            Button {
+                                age += 1
+                                face = GetFace(age: age, isMale: name.isMale)
+                            } label: {
+                                HStack {
+                                    Text("Next Year ")
+                                    Image(systemName: "forward.end")
+                                }
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .frame(height: 50)
+                                .background(Color.blue.gradient)
+                                .foregroundColor(.white)
+                                .font(.system(size:20, weight: .bold))
+                                .cornerRadius(25.0)
+                            }
+                            
+                        }
+                        .listRowBackground(Color.clear)
+                    }
                 }
                 .navigationTitle("Game Of A Life")
                 .navigationBarTitleDisplayMode(.inline)
