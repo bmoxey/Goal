@@ -27,7 +27,7 @@ struct MainMenu: View {
                         .foregroundColor(.white)
                         
                     Text("by Brett Moxey")
-                        .font(.system(size:24))
+                        .font(.system(size:18))
                         .foregroundColor(.white)
                         .padding(.bottom, -24)
                     Image("Brett-Computer")
