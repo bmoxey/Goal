@@ -337,16 +337,16 @@ func getName() -> (firstName:String, surName:String, isMale:Bool, color:Int) {
     let totOdds = surName.light + surName.medLight + surName.medium + surName.medDark + surName.dark
     let myOdds = Int.random(in: 0...totOdds)
     var skin = 0
-    if myOdds > surName.light {
+    if myOdds < surName.light {
+        skin = 0
+    } else if myOdds < surName.light + surName.medLight {
         skin = 1
-    } else if myOdds > surName.light + surName.medLight {
+    } else if myOdds < surName.light + surName.medLight + surName.medium {
         skin = 2
-    } else if myOdds > surName.light + surName.medLight + surName.medium {
+    } else if myOdds < surName.light + surName.medLight + surName.medium + surName.medDark {
         skin = 3
-    } else if myOdds > surName.light + surName.medLight + surName.medium + surName.medDark {
-        skin = 4
     } else {
-        skin = 5
+        skin = 4
     }
 
 return (firstName, surName.surname, isMale, skin)

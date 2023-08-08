@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF37FAD52A81616900FF4C9F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AF3ED29E2A7B8F590069F889 /* Goal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3ED2A12A7B8F590069F889 /* GoalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalApp.swift; sourceTree = "<group>"; };
 		AF3ED2A32A7B8F590069F889 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +54,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		AF37FAD42A81614B00FF4C9F /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				AF37FAD52A81616900FF4C9F /* MyPlayground.playground */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
 		AF3ED2952A7B8F590069F889 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +81,7 @@
 		AF3ED2A02A7B8F590069F889 /* Goal */ = {
 			isa = PBXGroup;
 			children = (
+				AF37FAD42A81614B00FF4C9F /* Testing */,
 				AF413B232A80423F001D0DB0 /* Code */,
 				AFED268A2A801ABB003BA9BB /* UIKit Code */,
 				AF2877682A7F0495009B6435 /* Views */,
