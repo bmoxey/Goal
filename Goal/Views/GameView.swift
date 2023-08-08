@@ -12,9 +12,6 @@ struct GameView: View {
     var name = getName()
     var body: some View {
         ZStack {
-            ContainerRelativeShape()
-                .fill(Color(hue: Double((100-Double(age))/255.0), saturation: 0.25, brightness: 0.75).gradient)
-                .ignoresSafeArea()
             NavigationView {
                 Form {
                     Group {
@@ -25,7 +22,6 @@ struct GameView: View {
                             VStack(alignment: .leading) {
                                 Text("\(name.firstName) \(name.surName)")
                                     .font(.title2)
-                                    .foregroundColor(.black)
                                     .fontWeight(.medium)
                                 Text("Age \(age)")
                                     .font(.subheadline)
@@ -33,47 +29,78 @@ struct GameView: View {
                             }
                         }
                     }
-                    Section(header: Text("Health, Wealth & Happiness"), content: {
+                    .listRowInsets(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
+
+                    Section(header: Text("Wellness"), content: {
                         HStack {
-                            Image(systemName: "heart.circle.fill")
+                            Image(systemName: "heart.fill")
                                 .foregroundColor(.red)
+                                .frame(width: 24)
                             Text("Health")
                         }
                         HStack {
-                            Image(systemName: "dollarsign.circle.fill")
+                            Image(systemName: "dollarsign")
                                 .foregroundColor(.green)
+                                .frame(width: 24)
                             Text("Wealth")
                         }
                         HStack {
-                            Image(systemName: "face.smiling.inverse")
+                            Image(systemName: "face.smiling")
                                 .foregroundColor(.blue)
+                                .frame(width: 24)
                             Text("Happiness")
                         }
                     })
+                    .listRowInsets(EdgeInsets(top: 5, leading: 5, bottom: -20, trailing: 5))
                     Section(header: Text("Work"), content:{
                         HStack {
                             Image(systemName: "person.crop.square.filled.and.at.rectangle.fill")
-                                .foregroundColor(.brown)
+                                .foregroundColor(.cyan)
+                                .frame(width: 24)
                             Text("Occupation")
                         }
                     })
-                    Section(header: Text("Health, Wealth & Happiness"), content: {
+                    .listRowInsets(EdgeInsets(top: 5, leading: 5, bottom: -20, trailing: 5))
+                    Section(header: Text("Resources"), content: {
                         HStack {
                             Image(systemName: "car.fill")
                                 .foregroundColor(.purple)
+                                .frame(width: 24)
                             Text("Assets")
                         }
                         HStack {
                             Image(systemName: "basketball.fill")
                                 .foregroundColor(.orange)
+                                .frame(width: 24)
                             Text("Activities")
                         }
                         HStack {
-                            Image(systemName: "person.3.sequence.fill")
-                                .foregroundColor(.cyan)
+                            Image(systemName: "figure.2.arms.open")
+                                .foregroundColor(.pink)
+                                .frame(width: 24)
                             Text("Family and friends")
                         }
                     })
+                    .listRowInsets(EdgeInsets(top: 5, leading: 5, bottom: -20, trailing: 5))
+                    Section {
+                        Button {
+                            print("aa")
+                        } label: {
+                            HStack {
+                                Text("Next Year ")
+                                Image(systemName: "forward.end")
+                            }
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .frame(height: 50)
+                            .background(Color.blue.gradient)
+                            .foregroundColor(.white)
+                            .font(.system(size:20, weight: .bold))
+                            .cornerRadius(25.0)
+                        }
+
+                    }
+                    .listRowBackground(Color.clear)
+                    
                 }
                 .navigationTitle("Game Of A Life")
                 .navigationBarTitleDisplayMode(.inline)
@@ -87,3 +114,4 @@ struct GameView_Previews: PreviewProvider {
         GameView()
     }
 }
+
