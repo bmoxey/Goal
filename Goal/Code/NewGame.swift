@@ -17,314 +17,312 @@ func getName() -> (firstName:String, surName:String, isMale:Bool, color:Int) {
         var medDark: Int
         var dark: Int
     }
-    var surnames: [Surnames] = []
     
-    surnames.append(Surnames(surname: "Adams", light: 30, medLight: 30, medium: 30, medDark: 5, dark: 5))
-    surnames.append(Surnames(surname: "Allen", light: 30, medLight: 50, medium: 20, medDark: 0, dark:0))
-    surnames.append(Surnames(surname: "Anderson", light: 30, medLight: 50, medium: 20, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Bailey", light: 50, medLight:30, medium: 20, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Bell", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Bennet", light: 30, medLight: 30, medium: 40, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Blackman", light: 5,medLight:5, medium: 5, medDark: 5, dark: 80))
-    surnames.append(Surnames(surname: "Brown", light: 5,medLight:5, medium: 5, medDark: 80, dark: 5))
-    surnames.append(Surnames(surname: "Cameron", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Campbell", light: 30, medLight: 30, medium: 20, medDark: 10, dark: 10))
-    surnames.append(Surnames(surname: "Carter", light: 30, medLight: 20, medium: 30, medDark: 10, dark: 10))
-    surnames.append(Surnames(surname: "Chapman", light: 30, medLight: 30, medium: 30, medDark: 5, dark: 5))
-    surnames.append(Surnames(surname: "Clarke", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Cooper", light: 40, medLight: 20, medium: 30, medDark: 0, dark: 10))
-    surnames.append(Surnames(surname: "Davies", light: 30, medLight: 20, medium: 30, medDark: 10, dark: 10))
-    surnames.append(Surnames(surname: "Dixon", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Doyle", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Dwyer", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Edwards", light: 30, medLight: 20, medium: 30, medDark: 10, dark: 10))
-    surnames.append(Surnames(surname: "Elliot", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Ellis", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Evans", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Ferguson", light: 30, medLight: 30, medium: 40, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Fisher", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Ford", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Foster", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Fox", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Fraser", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Freeman", light: 30, medLight: 30, medium: 30, medDark: 0, dark: 10))
-    surnames.append(Surnames(surname: "Gibson", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Gill", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Gordon", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Graham", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Gray", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Green", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Hamilton", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Harrison", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Hart", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Hayes", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Henderson", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Hill", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Holmes", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Howard", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Huang", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0))
-    surnames.append(Surnames(surname: "Hunter", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Irwin", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Jackson", light: 20, medLight: 10, medium: 20, medDark: 20, dark: 30))
-    surnames.append(Surnames(surname: "Jenkins", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Johnson", light: 20, medLight: 30, medium: 20, medDark: 0, dark: 30))
-    surnames.append(Surnames(surname: "Johnston", light: 20, medLight: 30, medium: 20, medDark: 0, dark: 30))
-    surnames.append(Surnames(surname: "Jones", light: 30, medLight: 30, medium: 30, medDark: 0, dark: 10))
-    surnames.append(Surnames(surname: "Kelly", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Kennedy", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "King", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Knight", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Lee", light: 10, medLight: 0, medium: 40, medDark: 40, dark: 10))
-    surnames.append(Surnames(surname: "Lewis", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Lowe", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Lynch", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Martin", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Mason", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Matthews", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "McDonald", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Mills", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Mitchell", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Murphy", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Murray", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Nelson", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Newton", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Nguyen", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0))
-    surnames.append(Surnames(surname: "Nicholson", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "O’Brien", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Parker", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Parsons", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Payne", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Pearce", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Phillips", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Power", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Price", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Reynolds", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Roberts", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Robinson", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Ross", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Ryan", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Scott", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Sharma", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0))
-    surnames.append(Surnames(surname: "Simpson", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Smith", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0))
-    surnames.append(Surnames(surname: "Spencer", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Stephens", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Taylor", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Thomas", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Tran", light: 0, medLight: 0, medium: 0, medDark: 50, dark: 0))
-    surnames.append(Surnames(surname: "Turner", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Wang", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0))
-    surnames.append(Surnames(surname: "Webb", light: 40, medLight: 20, medium: 40, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "White", light: 10, medLight: 80, medium: 10, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Xu", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0))
-    surnames.append(Surnames(surname: "Young", light: 40, medLight: 20, medium: 40, medDark: 0, dark: 0))
-    surnames.append(Surnames(surname: "Zhang", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0))
+    var surnames: [Surnames] = [
+    Surnames(surname: "Adams", light: 30, medLight: 30, medium: 30, medDark: 5, dark: 5),
+    Surnames(surname: "Allen", light: 30, medLight: 50, medium: 20, medDark: 0, dark:0),
+    Surnames(surname: "Anderson", light: 30, medLight: 50, medium: 20, medDark: 0, dark: 0),
+    Surnames(surname: "Bailey", light: 50, medLight:30, medium: 20, medDark: 0, dark: 0),
+    Surnames(surname: "Bell", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Bennet", light: 30, medLight: 30, medium: 40, medDark: 0, dark: 0),
+    Surnames(surname: "Blackman", light: 5,medLight:5, medium: 5, medDark: 5, dark: 80),
+    Surnames(surname: "Brown", light: 5,medLight:5, medium: 5, medDark: 80, dark: 5),
+    Surnames(surname: "Cameron", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Campbell", light: 30, medLight: 30, medium: 20, medDark: 10, dark: 10),
+    Surnames(surname: "Carter", light: 30, medLight: 20, medium: 30, medDark: 10, dark: 10),
+    Surnames(surname: "Chapman", light: 30, medLight: 30, medium: 30, medDark: 5, dark: 5),
+    Surnames(surname: "Clarke", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Cooper", light: 40, medLight: 20, medium: 30, medDark: 0, dark: 10),
+    Surnames(surname: "Davies", light: 30, medLight: 20, medium: 30, medDark: 10, dark: 10),
+    Surnames(surname: "Dixon", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Doyle", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Dwyer", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Edwards", light: 30, medLight: 20, medium: 30, medDark: 10, dark: 10),
+    Surnames(surname: "Elliot", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Ellis", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Evans", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Ferguson", light: 30, medLight: 30, medium: 40, medDark: 0, dark: 0),
+    Surnames(surname: "Fisher", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Ford", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Foster", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Fox", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Fraser", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Freeman", light: 30, medLight: 30, medium: 30, medDark: 0, dark: 10),
+    Surnames(surname: "Gibson", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Gill", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Gordon", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Graham", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Gray", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Green", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Hamilton", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Harrison", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Hart", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Hayes", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Henderson", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Hill", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Holmes", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Howard", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Huang", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0),
+    Surnames(surname: "Hunter", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Irwin", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Jackson", light: 20, medLight: 10, medium: 20, medDark: 20, dark: 30),
+    Surnames(surname: "Jenkins", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Johnson", light: 20, medLight: 30, medium: 20, medDark: 0, dark: 30),
+    Surnames(surname: "Johnston", light: 20, medLight: 30, medium: 20, medDark: 0, dark: 30),
+    Surnames(surname: "Jones", light: 30, medLight: 30, medium: 30, medDark: 0, dark: 10),
+    Surnames(surname: "Kelly", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Kennedy", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "King", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Knight", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Lee", light: 10, medLight: 0, medium: 40, medDark: 40, dark: 10),
+    Surnames(surname: "Lewis", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Lowe", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Lynch", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Martin", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Mason", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Matthews", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "McDonald", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Mills", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Mitchell", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Murphy", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Murray", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Nelson", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Newton", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Nguyen", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0),
+    Surnames(surname: "Nicholson", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "O’Brien", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Parker", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Parsons", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Payne", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Pearce", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Phillips", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Power", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Price", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Reynolds", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Roberts", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Robinson", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Ross", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Ryan", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Scott", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Sharma", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0),
+    Surnames(surname: "Simpson", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Smith", light: 30, medLight: 30, medium: 30, medDark: 10, dark: 0),
+    Surnames(surname: "Spencer", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Stephens", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Taylor", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Thomas", light: 30, medLight: 40, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Tran", light: 0, medLight: 0, medium: 0, medDark: 50, dark: 0),
+    Surnames(surname: "Turner", light: 40, medLight: 30, medium: 30, medDark: 0, dark: 0),
+    Surnames(surname: "Wang", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0),
+    Surnames(surname: "Webb", light: 40, medLight: 20, medium: 40, medDark: 0, dark: 0),
+    Surnames(surname: "White", light: 10, medLight: 80, medium: 10, medDark: 0, dark: 0),
+    Surnames(surname: "Xu", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0),
+    Surnames(surname: "Young", light: 40, medLight: 20, medium: 40, medDark: 0, dark: 0),
+    Surnames(surname: "Zhang", light: 0, medLight: 0, medium: 50, medDark: 50, dark: 0)]
     
-    var boynames: [String] = []
+    var boynames: [String] = [
+    "Adam",
+    "Aiden",
+    "Alexander",
+    "Ali",
+    "Angus",
+    "Archer",
+    "Archie",
+    "Ari",
+    "Arlo",
+    "Arthur",
+    "Asher",
+    "Ashton",
+    "Austin",
+    "Beau",
+    "Benjamin",
+    "Billy",
+    "Bodhi",
+    "Caleb",
+    "Carter",
+    "Charles",
+    "Charlie",
+    "Connor",
+    "Cooper",
+    "Daniel",
+    "Darcy",
+    "Dylan",
+    "Edward",
+    "Eli",
+    "Elijah",
+    "Ethan",
+    "Ezra",
+    "Felix",
+    "Finn",
+    "Fletcher",
+    "Flynn",
+    "Gabriel",
+    "George",
+    "Hamish",
+    "Harrison",
+    "Harry",
+    "Harvey",
+    "Henry",
+    "Hudson",
+    "Hugo",
+    "Hunter",
+    "Isaac",
+    "Jack",
+    "Jackson",
+    "Jacob",
+    "James",
+    "Jasper",
+    "Jaxon",
+    "Jayden",
+    "Jordan",
+    "Joseph",
+    "Joshua",
+    "Jude",
+    "Kai",
+    "Lachlan",
+    "Lennox",
+    "Leo",
+    "Leon",
+    "Leonardo",
+    "Levi",
+    "Lewis",
+    "Liam",
+    "Lincoln",
+    "Logan",
+    "Louis",
+    "Luca",
+    "Lucas",
+    "Luka",
+    "Luke",
+    "Marcus",
+    "Mason",
+    "Matthew",
+    "Max",
+    "Michael",
+    "Muhammad",
+    "Noah",
+    "Oliver",
+    "Oscar",
+    "Owen",
+    "Parker",
+    "Patrick",
+    "Riley",
+    "River",
+    "Ryan",
+    "Ryder",
+    "Samuel",
+    "Sebastian",
+    "Sonny",
+    "Spencer",
+    "Theo",
+    "Theodore",
+    "Thomas",
+    "Vincent",
+    "William",
+    "Xavier",
+    "Zachary"]
     
-    boynames.append("Adam")
-    boynames.append("Aiden")
-    boynames.append("Alexander")
-    boynames.append("Ali")
-    boynames.append("Angus")
-    boynames.append("Archer")
-    boynames.append("Archie")
-    boynames.append("Ari")
-    boynames.append("Arlo")
-    boynames.append("Arthur")
-    boynames.append("Asher")
-    boynames.append("Ashton")
-    boynames.append("Austin")
-    boynames.append("Beau")
-    boynames.append("Benjamin")
-    boynames.append("Billy")
-    boynames.append("Bodhi")
-    boynames.append("Caleb")
-    boynames.append("Carter")
-    boynames.append("Charles")
-    boynames.append("Charlie")
-    boynames.append("Connor")
-    boynames.append("Cooper")
-    boynames.append("Daniel")
-    boynames.append("Darcy")
-    boynames.append("Dylan")
-    boynames.append("Edward")
-    boynames.append("Eli")
-    boynames.append("Elijah")
-    boynames.append("Ethan")
-    boynames.append("Ezra")
-    boynames.append("Felix")
-    boynames.append("Finn")
-    boynames.append("Fletcher")
-    boynames.append("Flynn")
-    boynames.append("Gabriel")
-    boynames.append("George")
-    boynames.append("Hamish")
-    boynames.append("Harrison")
-    boynames.append("Harry")
-    boynames.append("Harvey")
-    boynames.append("Henry")
-    boynames.append("Hudson")
-    boynames.append("Hugo")
-    boynames.append("Hunter")
-    boynames.append("Isaac")
-    boynames.append("Jack")
-    boynames.append("Jackson")
-    boynames.append("Jacob")
-    boynames.append("James")
-    boynames.append("Jasper")
-    boynames.append("Jaxon")
-    boynames.append("Jayden")
-    boynames.append("Jordan")
-    boynames.append("Joseph")
-    boynames.append("Joshua")
-    boynames.append("Jude")
-    boynames.append("Kai")
-    boynames.append("Lachlan")
-    boynames.append("Lennox")
-    boynames.append("Leo")
-    boynames.append("Leon")
-    boynames.append("Leonardo")
-    boynames.append("Levi")
-    boynames.append("Lewis")
-    boynames.append("Liam")
-    boynames.append("Lincoln")
-    boynames.append("Logan")
-    boynames.append("Louis")
-    boynames.append("Luca")
-    boynames.append("Lucas")
-    boynames.append("Luka")
-    boynames.append("Luke")
-    boynames.append("Marcus")
-    boynames.append("Mason")
-    boynames.append("Matthew")
-    boynames.append("Max")
-    boynames.append("Michael")
-    boynames.append("Muhammad")
-    boynames.append("Noah")
-    boynames.append("Oliver")
-    boynames.append("Oscar")
-    boynames.append("Owen")
-    boynames.append("Parker")
-    boynames.append("Patrick")
-    boynames.append("Riley")
-    boynames.append("River")
-    boynames.append("Ryan")
-    boynames.append("Ryder")
-    boynames.append("Samuel")
-    boynames.append("Sebastian")
-    boynames.append("Sonny")
-    boynames.append("Spencer")
-    boynames.append("Theo")
-    boynames.append("Theodore")
-    boynames.append("Thomas")
-    boynames.append("Vincent")
-    boynames.append("William")
-    boynames.append("Xavier")
-    boynames.append("Zachary")
-    
-    var girlnames: [String] = []
-    
-    girlnames.append("Aaliyah")
-    girlnames.append("Abigail")
-    girlnames.append("Addison")
-    girlnames.append("Adeline")
-    girlnames.append("Alice")
-    girlnames.append("Amelia")
-    girlnames.append("Anna")
-    girlnames.append("Annabelle")
-    girlnames.append("Aria")
-    girlnames.append("Ariana")
-    girlnames.append("Audrey")
-    girlnames.append("Aurora")
-    girlnames.append("Ava")
-    girlnames.append("Ayla")
-    girlnames.append("Bella")
-    girlnames.append("Billie")
-    girlnames.append("Bonnie")
-    girlnames.append("Charlie")
-    girlnames.append("Charlotte")
-    girlnames.append("Chloe")
-    girlnames.append("Claire")
-    girlnames.append("Clara")
-    girlnames.append("Daisy")
-    girlnames.append("Delilah")
-    girlnames.append("Eden")
-    girlnames.append("Eleanor")
-    girlnames.append("Elena")
-    girlnames.append("Eliza")
-    girlnames.append("Elizabeth")
-    girlnames.append("Ella")
-    girlnames.append("Ellie")
-    girlnames.append("Eloise")
-    girlnames.append("Elsie")
-    girlnames.append("Emilia")
-    girlnames.append("Emily")
-    girlnames.append("Emma")
-    girlnames.append("Eva")
-    girlnames.append("Evelyn")
-    girlnames.append("Evie")
-    girlnames.append("Florence")
-    girlnames.append("Frankie")
-    girlnames.append("Freya")
-    girlnames.append("Georgia")
-    girlnames.append("Grace")
-    girlnames.append("Hallie")
-    girlnames.append("Hannah")
-    girlnames.append("Harlow")
-    girlnames.append("Harper")
-    girlnames.append("Harriet")
-    girlnames.append("Hazel")
-    girlnames.append("Imogen")
-    girlnames.append("Isabel")
-    girlnames.append("Isabella")
-    girlnames.append("Isabelle")
-    girlnames.append("Isla")
-    girlnames.append("Ivy")
-    girlnames.append("Jasmine")
-    girlnames.append("Lara")
-    girlnames.append("Layla")
-    girlnames.append("Lily")
-    girlnames.append("Lola")
-    girlnames.append("Lucy")
-    girlnames.append("Luna")
-    girlnames.append("Mackenzie")
-    girlnames.append("Maddison")
-    girlnames.append("Maeve")
-    girlnames.append("Maggie")
-    girlnames.append("Matilda")
-    girlnames.append("Maya")
-    girlnames.append("Mia")
-    girlnames.append("Mila")
-    girlnames.append("Millie")
-    girlnames.append("Molly")
-    girlnames.append("Olive")
-    girlnames.append("Olivia")
-    girlnames.append("Penelope")
-    girlnames.append("Peyton")
-    girlnames.append("Phoebe")
-    girlnames.append("Piper")
-    girlnames.append("Pippa")
-    girlnames.append("Poppy")
-    girlnames.append("Quinn")
-    girlnames.append("Remi")
-    girlnames.append("Rose")
-    girlnames.append("Rosie")
-    girlnames.append("Ruby")
-    girlnames.append("Sadie")
-    girlnames.append("Sarah")
-    girlnames.append("Savannah")
-    girlnames.append("Scarlett")
-    girlnames.append("Sienna")
-    girlnames.append("Sofia")
-    girlnames.append("Sophia")
-    girlnames.append("Sophie")
-    girlnames.append("Stella")
-    girlnames.append("Summer")
-    girlnames.append("Violet")
-    girlnames.append("Willow")
-    girlnames.append("Zara")
-    girlnames.append("Zoe")
+    var girlnames: [String] = [
+    "Aaliyah",
+    "Abigail",
+    "Addison",
+    "Adeline",
+    "Alice",
+    "Amelia",
+    "Anna",
+    "Annabelle",
+    "Aria",
+    "Ariana",
+    "Audrey",
+    "Aurora",
+    "Ava",
+    "Ayla",
+    "Bella",
+    "Billie",
+    "Bonnie",
+    "Charlie",
+    "Charlotte",
+    "Chloe",
+    "Claire",
+    "Clara",
+    "Daisy",
+    "Delilah",
+    "Eden",
+    "Eleanor",
+    "Elena",
+    "Eliza",
+    "Elizabeth",
+    "Ella",
+    "Ellie",
+    "Eloise",
+    "Elsie",
+    "Emilia",
+    "Emily",
+    "Emma",
+    "Eva",
+    "Evelyn",
+    "Evie",
+    "Florence",
+    "Frankie",
+    "Freya",
+    "Georgia",
+    "Grace",
+    "Hallie",
+    "Hannah",
+    "Harlow",
+    "Harper",
+    "Harriet",
+    "Hazel",
+    "Imogen",
+    "Isabel",
+    "Isabella",
+    "Isabelle",
+    "Isla",
+    "Ivy",
+    "Jasmine",
+    "Lara",
+    "Layla",
+    "Lily",
+    "Lola",
+    "Lucy",
+    "Luna",
+    "Mackenzie",
+    "Maddison",
+    "Maeve",
+    "Maggie",
+    "Matilda",
+    "Maya",
+    "Mia",
+    "Mila",
+    "Millie",
+    "Molly",
+    "Olive",
+    "Olivia",
+    "Penelope",
+    "Peyton",
+    "Phoebe",
+    "Piper",
+    "Pippa",
+    "Poppy",
+    "Quinn",
+    "Remi",
+    "Rose",
+    "Rosie",
+    "Ruby",
+    "Sadie",
+    "Sarah",
+    "Savannah",
+    "Scarlett",
+    "Sienna",
+    "Sofia",
+    "Sophia",
+    "Sophie",
+    "Stella",
+    "Summer",
+    "Violet",
+    "Willow",
+    "Zara",
+    "Zoe"]
     
     let isMale = Bool.random()
     

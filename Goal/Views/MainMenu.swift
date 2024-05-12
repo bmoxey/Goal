@@ -71,7 +71,6 @@ struct MainMenu: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width:UIScreen.main.bounds.width, height: 150)
-
             }
         }
     }
